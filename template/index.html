@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block myblock %}
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    {% for index in indexs %}
+                    <h1 class="mb-0">
+                        {{ index.name }}
+                    </h1>
+                    <div class="subheading mb-1">
+                    <i class="bi bi-geo-alt"></i>{{ index.address }}
+                    </div>
+                    <div class="subheading_email_phone mb-5">
+                        <i class="bi bi-envelope"></i>{{ index.emailaddress }}
+                        <i class="bi bi-telephone"></i>{{ index.phone_number }}
+                    </div>
+                    <p class="lead mb-5">{{ index.bio }}</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="{{ index.linkedin }}" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a class="social-icon" href="{{ index.github }}" target="_blank"><i class="bi bi-github"></i></a>
+                        <a class="social-icon" href="{{ index.instagram }}" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a class="social-icon" href="{{ index.facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+            <hr class="m-0" />
+{% endblock %}

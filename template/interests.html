@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block myblock %}
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    {% for interest in interests %}
+                    <p>{{ interest.description }}</p>
+                    {% endfor %}
+                </div>
+            </section>
+            <hr class="m-0" />
+{% endblock %}
